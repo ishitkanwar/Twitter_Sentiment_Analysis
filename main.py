@@ -1,5 +1,6 @@
 import twitter
 import re
+
 from textblob import TextBlob
 import pandas as pd
 import os
