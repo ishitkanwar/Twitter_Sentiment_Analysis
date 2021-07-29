@@ -1,6 +1,8 @@
+
+
+# REQUIRED LIBRARIES
 import twitter
 import re
-
 from textblob import TextBlob
 import pandas as pd
 import os
@@ -10,6 +12,8 @@ import figures
 import w_c
 
 
+################################################################################################################
+
 # Setting up the base Directory to decide the location where the dataset file will be stored.
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -17,6 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent
 positive_tweets = []
 negative_tweets = []
 neutral_tweets = []
+
+##############################################################################################################
+
 
 # A basic function used to clean the tweet text using python regex.
 def clean_tweet(tweet):
@@ -51,6 +58,10 @@ def analyze_sentiment(tweet):
         negative_tweets.append(clean_tweet(tweet))
         return 'Negative'
 
+    
+    
+#####################################################################################################
+    
 # Main Function
 def main():
 
@@ -94,6 +105,8 @@ def main():
     # Drawing a Pie-Chart to visualize the results.
     figures.draw_figure()
 
+###############################################################################################
+   
 if __name__ == '__main__':
     
     # Running the main function
